@@ -1,0 +1,1552 @@
+<!-- Step 1-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta https-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor Portfolio</title>
+
+    <style>
+html, body {
+  margin: 0;
+  padding: 0;
+}
+        /*mobile responsive 1 */
+        @media (max-width: 768px) {
+  nav {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+  }
+  
+  nav a {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+        /* mobile responsive 2*/
+        @media (max-width: 768px) {
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  td, th {
+    min-width: 100px;
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+/* mobile responsive 3 */
+        body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+        
+   /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+      
+      .nav-links {
+        gap: 16px;
+        font-size: 14px;
+      }
+    }
+      
+       
+    
+
+body {
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column; 
+}
+
+main {
+  flex: 1; 
+}
+.body{
+background-color:#f1f5f9;
+}
+  .edu-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;  /* Rounded corners ke liye */
+  }
+  
+  /* Header row - Blue background */
+  .edu-table th {
+    background-color: blue;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    font-weight: 600;
+  }
+  
+  /* Table cells */
+  .edu-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e8eaed;
+  }
+  
+  /* Zebra stripes - alternate rows light grey */
+  .edu-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  /* Hover effect */
+  .edu-table tr:hover {
+    background-color: #e8f0fe;
+  }
+  
+  /* Gold Medalist highlight */
+.gold-badge {
+  background: linear-gradient(45deg, #ffd700, #ffed4e);
+  color: #7c2d12;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 12px;
+  border: 1px solid #f59e0b;
+}
+  
+  
+  /* PhD row highlight - highest degree */
+  .highlight-row {
+    background-color: #e6f4ea !important;
+    font-weight: 500;
+  }
+  
+  /* Year column right align */
+  .year-col {
+    text-align: right;
+    font-weight: 500;
+  }
+/* About Section Background */
+.about-section {
+  background: #f1f5f9;  
+  padding: 80px 20px;
+}
+
+.about-section h2 {
+  text-align: center;
+  color: #1e293b; 
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.about-section .intro-text {
+  text-align: center;
+  color: #475569; 
+  max-width: 800px;
+  margin: 0 auto 50px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+.about-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #3b82f6; /* Blue accent */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.about-card h3 {
+  color: #2563eb; /* Blue heading */
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.about-card p {
+  color: #334155; 
+  line-height: 1.6;
+}
+
+
+.education-table thead {
+  background: #3b82f6;
+  color: white;
+
+  }
+  
+  .about-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #202124;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .section-title:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #1a73e8;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+  
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+  }
+  
+  .info-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-left: 4px solid #1a73e8;
+    transition: all 0.3s ease;
+  }
+  
+  .info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  }
+  
+  .card-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+    display: block;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a73e8;
+    margin-bottom: 8px;
+  }
+  
+  .card-text {
+    font-size: 15px;
+    color: #5f6368;
+    line-height: 1.6;
+  }
+  
+  .highlight-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1a73e8;
+    display: block;
+  }
+
+
+
+  .awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;  /* Gap kam kar diya */
+    padding: 20px 0;
+  }
+  
+  .award-card {
+    background: #fff;
+    border: 1px solid #e8eaed;
+    border-top: 4px solid #1a73e8;  /* Top border blue */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+  }
+  
+  .award-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateY(-3px);  /* Hover pe upar uthega */
+  }
+  
+  .award-card p {
+    margin: 0;
+    line-height: 1.6;
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  .year-badge {
+    background: #1a73e8;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    float: right;
+  }
+  
+  .gold-badge {
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    color: #7c2d12;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  
+  .award-title {
+    font-weight: 600;
+    color: #202124;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+  }
+  
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin: 0 auto 20px;
+    background: white;
+    padding: 5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+  
+  .hero-name {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 10px 0;
+    letter-spacing: -1px;
+  }
+  
+  .hero-tagline {
+    font-size: 22px;
+    margin: 15px 0;
+    opacity: 0.95;
+    font-weight: 300;
+  }
+  
+  .hero-designation {
+    font-size: 16px;
+    margin: 20px 0;
+    line-height: 1.8;
+    opacity: 0.9;
+  }
+  
+  .hero-tags {
+    margin: 25px 0;
+  }
+  
+  .hero-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin: 5px;
+  }
+  
+  .hero-buttons {
+    margin-top: 35px;
+  }
+  
+  .btn-primary {
+    background: white;
+    color: #1a73e8;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 5px;
+    display: inline-block;
+    transition: all 0.3s;
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  .btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 28px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 5px;
+    display: inline-block;
+  }
+
+.invited-lectures {
+  font-family: 'Inter', Arial, sans-serif;
+  max-width: 900px;
+  margin: 40px 0;
+}
+.invited-lectures h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #e5e5e5;
+  padding-bottom: 8px;
+}
+.invited-lectures table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.invited-lectures th, .invited-lectures td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #e5e5e5;
+  vertical-align: top;
+}
+.invited-lectures th {
+  background-color: #f8f8f8;
+  font-weight: 600;
+}
+.invited-lectures tr:hover {
+  background-color: #fafafa;
+}
+.publications-section {
+  background: #f0f5ff;  /* Light blue background */
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.publications-section h2 {
+  font-size: 32px;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.scholar-btn {
+  display: inline-block;
+  background: #1a73e8;
+  color: white !important;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+.scholar-btn:hover {
+  background: #1557b0;
+}
+
+.pub-box {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: flex;
+  gap: 20px;
+  border-left: 4px solid #1a73e8;
+}
+
+.pub-number {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a73e8;
+  min-width: 30px;
+}
+
+.pub-content {
+  flex: 1;
+}
+
+.pub-authors {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.pub-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.journal-name {
+  font-style: italic;
+  color: #1a73e8;
+}
+
+.pub-journal {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.pub-tags {
+  margin-top: 12px;
+}
+
+.tag {
+  display: inline-block;
+  background: #e8f0fe;
+  color: #1967d2;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .pub-box {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .pub-number {
+    font-size: 18px;
+  }
+}
+.lectures-section {
+  background: #f0f5ff; /* Light blue background */
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.lectures-section h2 {
+  font-size: 32px;
+  color: #1a1a1a;
+  margin-bottom: 40px;
+}
+
+.lecture-card {
+  background: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.lecture-duration {
+  background: #1e40af; /* Dark blue strip for duration */
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  letter-spacing: 0.3px;
+}
+
+.lecture-body {
+  padding: 20px 24px;
+}
+
+.lecture-topic {
+  font-size: 17px;
+  font-weight: 600;
+  color: #111827;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.lecture-org {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.lecture-tag {
+  display: inline-block;
+  background: #dbeafe;
+  color: #1e40af;
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 16px;
+  font-weight: 600;
+}
+
+/* Hover effect */
+.lecture-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .lecture-duration {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+  .lecture-body {
+    padding: 16px 18px;
+  }
+  .lecture-topic {
+    font-size: 16px;
+  }
+}
+        
+  .container, main, section {
+    width: 100% !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+  h1 { font-size: 26px; }
+  h2 { font-size: 22px; }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  body {
+    overflow-x: hidden; 
+  }
+}
+ /* Footer */
+    
+.site-footer {
+  background: #1e293b;
+  padding: 40px 20px;
+  text-align: center;
+  width: 100vw;  
+margin-left:calc(-50vw + 50%);
+margin-top: 60px;
+postion: relative;
+left: 0;
+
+}
+
+.footer-text {
+  color: #94a3b8;
+  font-size: 14px;
+  margin: 0;
+}
+
+
+
+
+  
+ 
+
+  .pub-card {
+    background: #fff;
+    border-left: 4px solid #1a73e8;  /* Blue side line */
+    padding: 18px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-radius: 6px;
+  }
+  .pub-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #202124;
+    margin-bottom: 8px;
+  }
+  .pub-authors {
+    color: #5f6368;
+    margin-bottom: 6px;
+  }
+  .pub-journal {
+    font-style: italic;
+    color: #1a73e8;
+  }
+  .badge {
+    display: inline-block;
+    background: #e8f0fe;
+    color: #1967d2;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 6px;
+    margin-top: 8px;
+  }
+  .badge-q1 { background: #e6f4ea; color: #137333; } /* Green for Q1 */
+  .badge-scopus { background: #fef7e0; color: #b06000; } /* Orange for SCOPUS */
+  .doi-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .doi-link:hover { text-decoration: underline; }
+
+
+
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    html{
+        scroll-behavior:smooth;
+    }
+
+    body{
+        background-color: #FAF9F6;
+        color:black;
+font-family:Arial,sans-serif;
+    }
+
+    .navbar{
+        position:fixed;
+        top:0;
+        width:100%;
+        background-color:rgb(18,18,62);
+        color:white;
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        padding:15px 50px;
+        z-index:1000;
+        box-shadow:0 2px 10px rgba(0,0,0,0.2);
+height:80px;
+
+    }
+nav ul{
+color:#fff;
+display: flex;
+justify-content: center;
+}
+
+    .nav-links{
+        list-style:none;
+        display:flex;
+        gap:25px;
+    }
+<!-- Step 2 -->
+
+.nav-links a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+    color:#fff;
+}
+
+.profile-img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.professor-name{
+    font-size:22px;
+    font-weight:bold;
+}
+
+section{
+    min-height:100vh;
+    padding:100px 10%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+h1,h2{
+    margin-bottom:20px;
+    color:#0f172a;
+}
+
+p{
+    line-height:1.8;
+}
+<!-- Step 3 -->
+
+.home{
+    background:linear-gradient(135deg,#dbeafe,#eff6ff);
+}
+
+.home h1{
+    font-size:48px;
+}
+
+.home p{
+    font-size:20px;
+    max-width:700px;
+}
+
+.about,
+.publications,
+.awards/honours,
+.contact{
+
+    background:white;
+    margin:20px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+.table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+.th,td{
+border:1px solid #ccc;
+padding:12px;
+text-allign:center;
+}
+.th{
+background-color:#003366;
+color:white;
+}
+.table:hover{
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:20px;
+}
+
+.card{
+    background:#f8fafc;
+    padding:20px;
+    border-radius:12px;
+    border-left:5px solid #2563eb;
+    transition:0.3s;
+}
+<!-- Step 4 -->
+
+.contact {
+  padding: 80px 20px;  
+  background: #f8fafc; 
+}
+<!-----contact section  main container ------>
+.contact {
+  min-height: auto !important; 
+  padding: 60px 20px;
+}
+/* for contact links */
+.contact-links {
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  text-align: left;
+}
+
+.contact-links p {
+  margin: 12px 0;
+  font-size: 16px;
+  color: #334155;
+}
+
+.contact-links i {
+  color: #2563eb;
+  margin-right: 10px;
+  width: 20px;
+}
+
+.contact-links a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #1e293b;
+}
+
+/* Tumhara existing code */
+.contact-form{
+  max-width: 600px;
+  margin: 0 auto; 
+}
+
+.contact-form input,
+.contact-form textarea{
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit; 
+}
+
+.contact-form button{
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.contact-form button:hover{
+  background: #1d4ed8;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.contact-form{
+    max-width:600px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.contact-form button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+<!-- Step 5 -->
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:10px;
+        padding:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .home h1{
+        font-size:36px;
+color:white;
+    }
+}
+        @media (max-width: 768px) {
+  body {
+    padding-top: 70px; /* Navbar ke liye space */
+    overflow-x: hidden;
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #1e293b;
+    z-index: 999;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .container, section, .card {
+    width: 100% !important;
+    padding: 15px !important;
+    margin: 10px 0 !important;
+    box-sizing: border-box;
+  }
+  
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  a {
+    word-break: break-all;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+
+<nav class="navbar">
+
+    <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#publications" class="nav-link">Publications</a></li>
+        <li><a href="#awards/honours" class="nav-link">Awards/Honours</a></li>
+        <li><a href="#invited lectures" class="nav-link">Invited lectures</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <div class="professor-name">
+         Dr.Tina Dutta
+    </div>
+
+</nav>
+<!-- Step 6 --> 
+
+<!-- Home -->
+<div class="hero-section">
+  <div class="hero-content">
+    
+    
+    <img src="teacher.webp" alt="Dr. Tina Dutta" class="profile-pic">
+    
+    <h1 class="hero-name">Dr. Tina Dutta</h1>
+    
+    <p class="hero-tagline">Academic Researcher | Statistician | ML Enthusiast</p>
+    
+    <div class="hero-designation">
+      <strong>Assistant Professor</strong><br>
+      Department of Quantitative Economics & Data Science<br>
+      BIT Mesra, Ranchi | PhD, IIM Calcutta
+    </div>
+    
+    
+    <div class="hero-tags">
+      <span class="hero-tag">Python</span>
+      <span class="hero-tag">Power BI</span>
+      <span class="hero-tag">STATA</span>
+      <span class="hero-tag">SPSS</span>
+      <span class="hero-tag">Arc-GIS</span>
+      <span class="hero-tag">NVIVO</span>
+      <span class="hero-tag">MS-Office</span>
+
+    </div>
+    
+    <!-- Buttons -->
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">📧 Contact Me</a>
+      <a href="resume.pdf" class="btn-secondary" download>📄 Download CV</a>
+    </div>
+    
+  </div>
+</div>
+
+
+
+
+
+<section class="about-section" id="about">
+  <div class="about-container">
+    <h2 class="section-title">About Me</h2>
+    
+    <!-- Intro line -->
+    <p style="text-align:center; font-size:17px; color:#5f6368; max-width:700px; margin:0 auto 40px; line-height:1.7;">
+      I specialize in <strong>Data Science, Econometrics & Applied Statistics</strong> with 9+ years of post-PhD experience. 
+      I bridge academic research with industry applications in analytics and machine learning.
+    </p>
+    
+    <!-- 3 Cards Grid -->
+    <div class="about-grid">
+      
+      <div class="info-card">
+        <span class="card-icon"></span>
+        <div class="card-title">Current Designation</div>
+        <div class="card-text">
+          <strong>Assistant Professor</strong><br>
+          Dept. of Quantitative Economics & Data Science<br>
+          BIT Mesra, Ranchi
+        </div>
+      </div>
+      
+      <div class="info-card">
+        <span class="card-icon">💼</span>
+        <div class="card-title">Experience</div>
+        <div class="card-text">
+          <span class="highlight-number">9+</span>
+          Years Post-PhD Experience<br>
+          
+  
+        </div>
+      </div>
+      
+      <div class="info-card">
+        <span class="card-icon">🎓</span>
+        <div class="card-title">Education</div>
+        <div class="card-text">
+          <strong>PhD(Fellow), IIM Calcutta</strong><br>
+          Gold Medalist - M.Phil, IIPS Mumbai<br>
+          UGC-NET JRF Qualified
+        </div>
+      </div>
+      
+    </div>
+  
+
+
+<!-- Education Card -->
+<div class="card">
+  <h3>🎓 Education</h3>
+  <table class="edu-table">
+    <tr>
+      <th>Degree</th>
+      <th>Institute</th>
+      <th>CGPA/%</th>
+      <th class="year-col">Year</th>
+    </tr>
+    <tr class="highlight-row">
+      <td><strong>PhD (Fellow)</strong></td>
+      <td>Indian Institute of Management Calcutta, Kolkata</td>
+      <td>NA</td>
+      <td class="year-col">2016</td>
+    </tr>
+    <tr>
+      <td>M.Phil (Population Studies)</td>
+      <td>IIPS, Mumbai</td>
+      <td>7.74 <span class="gold-badge">🥇Gold Medalist</span></td>
+      <td class="year-col">2009</td>
+    </tr>
+    <tr>
+      <td>M.Sc (Statistics)</td>
+      <td>Banaras Hindu University (BHU), Varanasi</td>
+      <td><strong>88.9%</strong></td>
+      <td class="year-col">2007</td>
+    </tr>
+    
+  </table>
+</div></div></div>
+
+
+</section>
+<!-- Step 8 -->
+
+<!-- Publications -->
+<section id="publications"class="publications">
+
+
+<section class="publications-section">
+  <div class="container">
+    <h2>Publications</h2>
+    
+
+    <!-- Box 1 -->
+    <div class="pub-box">
+      <div class="pub-number">1</div>
+      <div class="pub-content">
+        <div class="pub-authors">Dutta, T., & Kumar, Abhinav. (Forthcoming).</div>
+        <div class="pub-title">Harnessing LDA-based topic modelling to unveil the focus areas in alternate healthcare in India.</div>
+        <div class="pub-journal"><span class="journal-name">Journal of Ayurveda and Integrated Medicine</span>, 101356.</div>
+        <div class="pub-tags">
+          <span class="tag">SCOPUS</span>
+          <span class="tag">ESCI-Q2</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Box 2 -->
+    <div class="pub-box">
+      <div class="pub-number">2</div>
+      <div class="pub-content">
+        <div class="pub-authors">Dutta, T., and Shaw, A. (2026).</div>
+        <div class="pub-title">"A Profile Sketch of Middle-Class Women Labour Migrants in Contemporary Urban India" in Kunal Keshri, Irudaya Rajan and Kirti Gaur (ed). COVID-19 and Labour Migration in India: Evidences from the Pandemic.</div>
+        <div class="pub-journal"><span class="journal-name">Routledge Publications</span>, India, pp. 75-92. (print ISBN: 9781032007083, online ISBN: 9781003729679)</div>
+      </div>
+    </div>
+
+    <!-- Box 3 -->
+    <div class="pub-box">
+      <div class="pub-number">3</div>
+      <div class="pub-content">
+        <div class="pub-authors">Kumari, K., Koley, T., & Dutta, T. (2025).</div>
+        <div class="pub-title">Assessment of flood damage severity, economic growth dynamics and relief fund allocation in the districts of Bihar: A non-parametric approach.</div>
+        <div class="pub-journal"><span class="journal-name">International Journal of Disaster Risk Reduction</span>, 105047.</div>
+        <div class="pub-tags">
+          <span class="tag">ABDC-A</span>
+          <span class="tag">SCIE-Q1</span>
+          <span class="tag">SCOPUS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Box 4 -->
+    <div class="pub-box">
+      <div class="pub-number">4</div>
+      <div class="pub-content">
+        <div class="pub-authors">Kedia, K., Dutta, T., Sharma, K., Thakur, D. (2024).</div>
+        <div class="pub-title">A Systematic Review of Technical Analysis-Based Forecasting Techniques: Global v/s Indian Perspectives.</div>
+        <div class="pub-journal"><span class="journal-name">Journal of Informatics & Education Research for Finance, Mortgages and Insurance</span>, 4(2), 258-288.</div>
+        <div class="pub-tags">
+          <span class="tag">ABDC-C</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Box 5 -->
+    <div class="pub-box">
+      <div class="pub-number">5</div>
+      <div class="pub-content">
+        <div class="pub-authors">Dutta, T., and Shaw, A. (2020).</div>
+        <div class="pub-title">Middle Class Women's Migration. in Irudaya Rajan and Sumeetha M (ed). A Handbook of Internal Migration in India.</div>
+        <div class="pub-journal"><span class="journal-name">Sage Publications</span>, New Delhi, India, pp. 385-407. (print ISBN: 9789353285609, online ISBN: 9789353287788)</div>
+      </div>
+    </div>
+
+     <!-- Box 5 -->
+    <div class="pub-box">
+      <div class="pub-number">6</div>
+      <div class="pub-content">
+        <div class="pub-authors">Dutta, T., and Shaw, A. (2020).</div>
+        <div class="pub-title">Middle Class Women's Migration. in Irudaya Rajan and Sumeetha M (ed). A Handbook of Internal Migration in India.</div>
+        <div class="pub-journal"><span class="journal-name">Sage Publications</span>, New Delhi, India, pp. 385-407. (print ISBN: 9789353285609, online ISBN: 9789353287788)</div>
+      </div>
+    </div>
+
+
+    <!-- Box 7 -->
+    <div class="pub-box">
+      <div class="pub-number">7</div>
+      <div class="pub-content">
+        <div class="pub-authors">Dutta, T., and Shaw, A. (2017).</div>
+        <div class="pub-title">Lifetime Vs Current Migration: A Methodological Review.</div>
+        <div class="pub-journal"><span class="journal-name">Demography India</span>, 44(1 and 2), 69-82. (ISSN: 0970-454X)</div>
+      </div>
+    </div>
+
+    <!-- Box 8 -->
+    <div class="pub-box">
+      <div class="pub-number">8</div>
+      <div class="pub-content">
+        <div class="pub-authors">Dutta, T., and Pal, P. (2012).</div>
+        <div class="pub-title">Politics Overpowering Welfare: Unorganised Workers' Social Security Act 2008.</div>
+        <div class="pub-journal"><span class="journal-name">Economic and Political Weekly</span> [ISSN(Print): 0012-9976, ISSN(Online): 2349-8846], 47(7), 26-30.</div>
+        <div class="pub-tags">
+          <span class="tag">ABDC-B</span>
+          <span class="tag">SCOPUS</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+                    
+
+
+<!-- Step 9 -->
+
+<!-- awards/honours -->
+
+<section id="awards/honours" class="awards/honours">
+<h2>🏆 Awards & Honours</h2>
+
+<div class="awards-grid">
+
+  <div class="award-card">
+    <span class="year-badge">2025-26</span>
+    <span class="award-title">🥇 ICSSR Full Term Doctoral Fellowship to Phd Scholar</span>
+    <p>Research proposal "Gig and Platform Economy in India: Emerging Employment Dynamics, Migration and Gender Perspectives" secured full term Doctoral Fellowshi.<br>
+    <em>PhD Scholar: Ms Muskan Chhetri</em></p>
+  </div>
+
+  <div class="award-card">
+    <span class="year-badge">2013</span>
+    <span class="award-title">🌍 International Sponsorship</span>
+    <p>Full Sponsorship to participate in "Migration Summer School: Theories, Methods and Policies" at Migration Policy Center, European University Institute, Florence, Italy.</p>
+  </div>
+
+  <div class="award-card">
+    <span class="year-badge">2009</span>
+    <span class="award-title">🥇 Dr. P.N. Mari Bhat Gold Medal</span>
+    <p>For Best Dissertation in M.Phil. Population Studies at IIPS, Mumbai. 
+    <span class="gold-badge">Gold Medalist</span></p>
+  </div>
+
+  <div class="award-card">
+    <span class="year-badge">2008</span>
+    <span class="award-title">🎓 UGC-NET JRF</span>
+    <p>All India UGC-NET Junior Research Fellowship (JRF) in Population Studies, June 2008.</p>
+  </div>
+
+  <div class="award-card">
+    <span class="year-badge">Oct 2008</span>
+    <span class="award-title">🏅 Best Poster Award</span>
+    <p>Dr. S.N. Singh Best POSTER Presentation Award at XXXth Annual Conference of ISAP, ISEC Bangalore.</p>
+  </div>
+
+  <div class="award-card">
+    <span class="year-badge">2007-08</span>
+    <span class="award-title">🥇 Dr. C. Chandrasekaran Gold Medal</span>
+    <p>For being topper in Master of Population Studies at IIPS, Mumbai.
+    <span class="gold-badge">Gold Medalist</span></p>
+  </div>
+
+  <div class="award-card">
+    <span class="year-badge">2007-08</span>
+    <span class="award-title">🇮🇳 Government of India Fellowship</span>
+    <p>GOI Fellowship for pursuing Master of Population Studies (MPS) and M.Phil. at IIPS, Mumbai.</p>
+  </div>
+
+</div>
+</section>
+
+<!-- Step 10 -->
+<!----invited lectures---->
+<section id="invited lectures" invited lectures">
+
+
+
+<section class="lectures-section">
+  <div class="container">
+    <h2>Invited Lectures (Selected) as a Resource Person</h2>
+
+    <!-- Lecture 1 -->
+    <div class="lecture-card">
+      <div class="lecture-duration">May 25-29, 2026</div>
+      <div class="lecture-body">
+        <div class="lecture-topic">"Research Methodology and Advanced Techniques in Multivariate Data Analysis"</div>
+        <div class="lecture-org">Department of Management Studies, Birla Institute of Technology, Mesra, Ranchi</div>
+        <span class="lecture-tag">FDP</span>
+      </div>
+    </div>
+
+    <!-- Lecture 2 -->
+    <div class="lecture-card">
+      <div class="lecture-duration">April 25-26, 2026</div>
+      <div class="lecture-body">
+        <div class="lecture-topic">"Transforming Data into Insights using Power BI"</div>
+        <div class="lecture-org">Tata Institute of Social Sciences (TISS), Hyderabad</div>
+        <span class="lecture-tag">Power BI</span>
+      </div>
+    </div>
+
+    <!-- Lecture 3 -->
+    <div class="lecture-card">
+      <div class="lecture-duration">March 26-27, 2025</div>
+      <div class="lecture-body">
+        <div class="lecture-topic">"Data Analysis using Python"</div>
+        <div class="lecture-org">Utkal University, Bhubaneswar</div>
+        <span class="lecture-tag">Python</span>
+      </div>
+    </div>
+
+    <!-- Lecture 4 -->
+    <div class="lecture-card">
+      <div class="lecture-duration">February 24-28, 2025</div>
+      <div class="lecture-body">
+        <div class="lecture-topic">"Quantitative Data Analysis" in a five-day FDP on "Research Methodology"</div>
+        <div class="lecture-org">The Assam Royal Global University</div>
+        <span class="lecture-tag">FDP</span>
+      </div>
+    </div>
+
+    <!-- Lecture 5 -->
+    <div class="lecture-card">
+      <div class="lecture-duration">November 18-22, 2024</div>
+      <div class="lecture-body">
+        <div class="lecture-topic">5-Day Workshop on "Business Intelligence and Analytics using Microsoft Power BI"</div>
+        <div class="lecture-org">Jaypee Institute of Information Technology, Noida</div>
+        <span class="lecture-tag">Power BI</span>
+      </div>
+    </div>
+
+    <!-- Lecture 6 -->
+    <div class="lecture-card">
+      <div class="lecture-duration">September 27 - October 5, 2024</div>
+      <div class="lecture-body">
+        <div class="lecture-topic">"Big Data Using Machine Learning"</div>
+        <div class="lecture-org">International Institute for Population Sciences (IIPS), Mumbai</div>
+        <span class="lecture-tag">Machine Learning</span>
+      </div>
+    </div>
+
+    <!-- Lecture 7 -->
+    <div class="lecture-card">
+      <div class="lecture-duration">July 23-29, 2024</div>
+      <div class="lecture-body">
+        <div class="lecture-topic">"Data Visualization using MS Power BI"</div>
+        <div class="lecture-org">Birsa Agricultural University, Ranchi</div>
+        <span class="lecture-tag">Power BI</span>
+      </div>
+    </div>
+
+    <!-- Lecture 8 -->
+    <div class="lecture-card">
+      <div class="lecture-duration">February 27-29, 2024</div>
+      <div class="lecture-body">
+        <div class="lecture-topic">"Analysing Social Science Research Data Using Python Programming"</div>
+        <div class="lecture-org">Department of Geography, Institute of Science, Banaras Hindu University, Varanasi</div>
+        <span class="lecture-tag">Python</span>
+      </div>
+    </div>
+
+    <!-- Lecture 9 -->
+    <div class="lecture-card">
+      <div class="lecture-duration">January 25-27, 2024</div>
+      <div class="lecture-body">
+        <div class="lecture-topic">"Analysing Social Science Research Data Using Python Programming"</div>
+        <div class="lecture-org">VART Consulting Pvt Ltd, Mumbai</div>
+        <span class="lecture-tag">Python</span>
+      </div>
+    </div>
+
+    <!-- Lecture 10 -->
+    <div class="lecture-card">
+      <div class="lecture-duration">8 November 2023</div>
+      <div class="lecture-body">
+        <div class="lecture-topic">"Multiple Regression Analysis: Concepts and Applications"</div>
+        <div class="lecture-org">Vellore Institute of Technology, Vellore, Tamil Nadu</div>
+        <span class="lecture-tag">Statistics</span>
+      </div>
+    </div>
+
+    <!-- Lecture 11 -->
+    <div class="lecture-card">
+      <div class="lecture-duration">18-25 September 2023</div>
+      <div class="lecture-body">
+        <div class="lecture-topic">"Data Visualization and Interactive Dashboards using Microsoft Power BI"</div>
+        <div class="lecture-org">Deepak Foundation, Vadodara, Gujarat</div>
+        <span class="lecture-tag">Power BI</span>
+      </div>
+    </div>
+
+    <!-- Lecture 12 -->
+    <div class="lecture-card">
+      <div class="lecture-duration">9-10 June 2023</div>
+      <div class="lecture-body">
+        <div class="lecture-topic">"Interactive Visualization and Dashboard Creation Using Microsoft Power BI"</div>
+        <div class="lecture-org">VART Consulting Pvt Ltd, Mumbai</div>
+        <span class="lecture-tag">Power BI</span>
+      </div>
+    </div>
+
+    <!-- Lecture 13 -->
+    <div class="lecture-card">
+      <div class="lecture-duration">8-12 May, 2023</div>
+      <div class="lecture-body">
+        <div class="lecture-topic">"Data Visualization and Interactive Dashboards using Microsoft Power BI"</div>
+        <div class="lecture-org">IIPS, Mumbai</div>
+        <span class="lecture-tag">Power BI</span>
+      </div>
+    </div>
+
+    <!-- Lecture 14 -->
+    <div class="lecture-card">
+      <div class="lecture-duration">1-5 March, 2023</div>
+      <div class="lecture-body">
+        <div class="lecture-topic">"Introduction to Python Programming"</div>
+        <div class="lecture-org">IIPS, Mumbai</div>
+        <span class="lecture-tag">Python</span>
+      </div>
+    </div>
+
+    <!-- Lecture 15 -->
+    <div class="lecture-card">
+      <div class="lecture-duration">22-23 February, 2021</div>
+      <div class="lecture-body">
+        <div class="lecture-topic">Data Visualization and Analytics using MS Power BI</div>
+        <div class="lecture-org">IIPS, Mumbai</div>
+        <span class="lecture-tag">Power BI</span>
+      </div>
+    </div>
+
+    <!-- Lecture 16 -->
+    <div class="lecture-card">
+      <div class="lecture-duration">14 December, 2020</div>
+      <div class="lecture-body">
+        <div class="lecture-topic">"Introduction to Business Intelligence and Power BI" and "Data Visualization and Interactivity using Power BI"</div>
+        <div class="lecture-org">UGC-HRDC, Central University of Allahabad at GBPSSI, Prayagraj</div>
+        <span class="lecture-tag">Power BI</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- Step 11 -->
+
+<!-- Step 10 -->
+
+<section id="contact" class="contact">
+    <h2>Contact Information</h2>
+
+    
+    
+    
+    <div class="contact-links">
+      <p><i class="fa-solid fa-envelope"></i> Email: <a href="tina.dutta@bitmesra.ac.in">tina.dutta@bitmesra.ac.in</a></p>
+      <p><i class="fa-brands fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/dr-tina-dutta-67412015/" target="_blank">https://www.linkedin.com/in/dr-tina-dutta-67412015/</a></p>
+      <p><i class="fa-solid fa-building"></i> Office: Department of Quantitative Economics and Data Science</p>
+    </div>
+
+    
+    <form class="contact-form">
+      ...
+    </form>
+  </div>
+</section>
+    
+
+   
+</section>
+<!-- Step 11 -->
+
+<body>
+  <div class="container">   
+</div>
+    
+    
+  <footer class="site-footer">
+    <p class="footer-text">© 2026 Prof. Dr. Tina Dutta | Academic Portfolio. All rights reserved.</p>
+  </footer>
+
+</body>
